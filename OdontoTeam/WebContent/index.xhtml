@@ -3,19 +3,14 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"> 
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui"> 
 
 <h:head>
-	
+<title>
+</title>
 </h:head> 
 <h:body> 
-<p:panel>
-	<p:button value="Teste"/>
-</p:panel>
-
-<a href="paginas/cadastrarMedico.jsf"> Cadastrar Médico </a> <br />
-<a href="paginas/cadastrarFuncionario.jsf"> Cadastrar Funcionário </a> <br />
-<a href="paginas/cadastrarCliente.jsf"> Cadastrar Cliente </a> <br />
-
+<ui:composition template="/templates/master.xhtml"></ui:composition>
 </h:body> 
 </html>
