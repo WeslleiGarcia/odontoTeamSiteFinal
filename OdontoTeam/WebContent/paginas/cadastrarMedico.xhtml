@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css" />
+    <h:outputStylesheet library="bootstrap/css" name="bootstrap-theme.min.css" />
+    <h:outputScript library="bootstrap/js" name="bootstrap.min.js" />
+    <h:outputScript library="jquery/js" name="jquery-2.1.4.min.js" />
+</h:head> 
+<h:body>
+
+<div class="ui-grid ui-grid-responsive">
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-3"></div>   
+        <div class="ui-grid-col-5">
+        <p:panel>
+        	<h:form id="form">
+			    <p:growl id="msgs" showDetail="true" />
+			    	<p:fieldset legend="Cadastrar Médico">
+			    	  
+			    	  <div class="row form-inline">
+						  <div class="form-group">
+						    <label for="nome">Nome:</label>
+						    <input type="text" class="form-control" id="nome" placeholder="nome" size="40" />
+						    
+						    <label for="cro">CRO:</label>
+							<input type="text" class="form-control" id="cro" placeholder="cro" />
+						  </div>
+					  </div>
+					  
+					  <div class="row">
+						  <div class="form-group">
+							<label for="especialidade">Especialidade:</label>
+							<select class="form-control">
+								<option>Odontopediatria</option>
+								<option>Radiologia Odontológica e Imaginologia</option>
+								<option>Dentística Restauradora</option>
+								<option>Dentística</option>
+								<option>Endodontia </option>
+								<option>Prótese Dentária</option>
+								<option>Ortodontia e Ortopedia Facial</option>
+								<option>Ortodontia </option>
+								<option>Ortopedia Funcional dos Maxilares</option>
+								<option>Implantodontia  </option>
+								<option>Cirurgia e Traumatologia Buco</option>
+								<option>Prótese Buco – Maxilo – Facial</option>
+								<option>Odontologia Legal</option>
+								<option>Odontologia em Saúde Coletiva</option>
+								<option>Saúde Coletiva </option>
+								<option>Estomatologia </option>
+								<option>Patologia Bucal</option>
+								<option>Disfunção Têmporo Mandibular e Dor Orofacial</option>
+								<option>Odontogeriatria </option>
+								<option>Odontologia para Pacientes com Necessidades Especiais </option>
+								<option>Odontologia do Trabalho</option>
+							</select>
+						  </div>
+					  </div>
+					  
+					  <div class="row">
+						  <div class="form-group">
+						    <label for="dataNASC">Data de Nascimento:</label>
+						    <p:calendar id="dataNasc" value="#{calendarView.date5}" locale="de" navigator="true" pattern="yyyy-MMM-dd" required="true" requiredMessage="O Campo Data de Nascimento é obrigatório." />								
+						  </div>
+					  </div>
+					  
+					  <div class="row form-inline">
+						  <div class="form-group">
+						    <label for="telefone">Telefone:</label>
+						    <input type="text" class="form-control" id="telefone" placeholder="telefone" />
+						    
+						    <label for="celular">Celular:</label>
+						    <input type="text" class="form-control" id="celular" placeholder="celular"  />
+						  </div>
+					  </div>
+					  
+					  <div class="row">
+						  <div class="form-group">
+						    <label for="email">Email:</label>
+						    <input type="email" class="form-control" id="telefone" placeholder="email" />
+						  </div>
+					  </div>
+					  
+					  <div class="row form-inline">
+						  <div class="form-group">
+						    <label for="endereco">Endereço:</label>
+						    <input type="text" class="form-control" id="endereco" placeholder="rua" size="45" />
+	
+						    <label for="numero">n°:</label>
+						    <input type="text" class="form-control" id="numero"  />		    
+						  </div>
+					  </div>
+					  
+					  <div class="row">
+						  <div class="form-group">
+						    <label for="bairro">Bairro:</label>
+						    <input type="text" class="form-control" id="bairro" placeholder="bairro"  />
+						  </div>
+					  </div>
+					  
+					  <div class="row form-inline">
+						  <div class="form-group">
+						    <label for="cidade">Cidade:</label>
+						    <input type="text" class="form-control" id="cidade" placeholder="cidade" size="50" />
+						    
+						    <label for="estado">Estado:</label>
+						    <select class="form-control">
+							  <option>AC</option>
+							  <option>AL</option>
+							  <option>AP</option>
+							  <option>AM</option>
+							  <option>BA</option>
+							  <option>CE</option>
+							  <option>DF</option>
+							  <option>ES</option>
+							  <option>GO</option>
+							  <option>MA</option>
+							  <option>MT</option>
+							  <option>MS</option>
+							  <option>MG</option>
+							  <option>PA</option>
+							  <option>PB</option>
+							  <option>PR</option>
+							  <option>PR</option>
+							  <option>PE</option>
+							  <option>PI</option>
+							  <option>RJ</option>
+							  <option>RN</option>
+							  <option>RS</option>
+							  <option>RO</option>
+							  <option>RR</option>
+							  <option>SC</option>
+							  <option>SP</option>
+							  <option>SE</option>
+							  <option>TO</option>
+							</select>				    
+						  </div>
+					  </div>
+				</p:fieldset>
+				<p:panel>
+					<div class="text-center">
+						<button type="button" class="btn btn-success"> <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Salvar</button>
+						<button type="button" class="btn btn-primary"> <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Cancelar</button>
+					</div>
+				</p:panel>
+			</h:form>
+		</p:panel>
+        </div>
+    	<div class="ui-grid-col-4"></div>
+    </div>
+</div>
+
+
+
+
+<form>
+
+</form>
+
+</h:body> 
+</html>
